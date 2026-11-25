@@ -1,0 +1,291 @@
+{
+    "data":  [
+                 {
+                     "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                     "spans":  [
+                                   {
+                                       "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                       "spanID":  "84307c3e1242b366",
+                                       "operationName":  "agent.retrieve_context",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                                              "spanID":  "7b840a35381373e7"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616107119605,
+                                       "duration":  25684,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "retrieval.documents",
+                                                        "type":  "int64",
+                                                        "value":  1
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                       "spanID":  "06e62ac9d4b3b5e5",
+                                       "operationName":  "chat mock-llm-small",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                                              "spanID":  "7b840a35381373e7"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616107145396,
+                                       "duration":  1691306,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.operation.name",
+                                                        "type":  "string",
+                                                        "value":  "chat"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.provider.name",
+                                                        "type":  "string",
+                                                        "value":  "mock"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.request.model",
+                                                        "type":  "string",
+                                                        "value":  "mock-llm-small"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.usage.input_tokens",
+                                                        "type":  "int64",
+                                                        "value":  81
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.usage.output_tokens",
+                                                        "type":  "int64",
+                                                        "value":  46
+                                                    },
+                                                    {
+                                                        "key":  "llm.cost_usd",
+                                                        "type":  "float64",
+                                                        "value":  0.00003975
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                       "spanID":  "7b840a35381373e7",
+                                       "operationName":  "agent.run",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                                              "spanID":  "dfca8351d5708620"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616107119584,
+                                       "duration":  1717177,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "agent.question.length",
+                                                        "type":  "int64",
+                                                        "value":  38
+                                                    },
+                                                    {
+                                                        "key":  "agent.version",
+                                                        "type":  "string",
+                                                        "value":  "v2"
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "425e8fffa4fa08356c9327a544e01de6",
+                                       "spanID":  "dfca8351d5708620",
+                                       "operationName":  "POST /ask",
+                                       "references":  [
+
+                                                      ],
+                                       "startTime":  1795616107118905,
+                                       "duration":  1718681,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "opentelemetry.instrumentation.fastapi"
+                                                    },
+                                                    {
+                                                        "key":  "otel.scope.version",
+                                                        "type":  "string",
+                                                        "value":  "0.66b2"
+                                                    },
+                                                    {
+                                                        "key":  "http.flavor",
+                                                        "type":  "string",
+                                                        "value":  "1.1"
+                                                    },
+                                                    {
+                                                        "key":  "http.host",
+                                                        "type":  "string",
+                                                        "value":  "172.23.0.8:8000"
+                                                    },
+                                                    {
+                                                        "key":  "http.method",
+                                                        "type":  "string",
+                                                        "value":  "POST"
+                                                    },
+                                                    {
+                                                        "key":  "http.route",
+                                                        "type":  "string",
+                                                        "value":  "/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.scheme",
+                                                        "type":  "string",
+                                                        "value":  "http"
+                                                    },
+                                                    {
+                                                        "key":  "http.server_name",
+                                                        "type":  "string",
+                                                        "value":  "localhost"
+                                                    },
+                                                    {
+                                                        "key":  "http.status_code",
+                                                        "type":  "int64",
+                                                        "value":  200
+                                                    },
+                                                    {
+                                                        "key":  "http.target",
+                                                        "type":  "string",
+                                                        "value":  "/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.url",
+                                                        "type":  "string",
+                                                        "value":  "http://localhost/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.user_agent",
+                                                        "type":  "string",
+                                                        "value":  "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9818"
+                                                    },
+                                                    {
+                                                        "key":  "net.host.port",
+                                                        "type":  "int64",
+                                                        "value":  8000
+                                                    },
+                                                    {
+                                                        "key":  "net.peer.ip",
+                                                        "type":  "string",
+                                                        "value":  "172.23.0.6"
+                                                    },
+                                                    {
+                                                        "key":  "net.peer.port",
+                                                        "type":  "int64",
+                                                        "value":  54496
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "server"
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   }
+                               ],
+                     "processes":  {
+                                       "p1":  {
+                                                  "serviceName":  "observable-agent",
+                                                  "tags":  [
+                                                               {
+                                                                   "key":  "agent.version",
+                                                                   "type":  "string",
+                                                                   "value":  "v2"
+                                                               },
+                                                               {
+                                                                   "key":  "deployment.environment.name",
+                                                                   "type":  "string",
+                                                                   "value":  "lab"
+                                                               },
+                                                               {
+                                                                   "key":  "service.instance.id",
+                                                                   "type":  "string",
+                                                                   "value":  "d67abb3b7132"
+                                                               },
+                                                               {
+                                                                   "key":  "service.version",
+                                                                   "type":  "string",
+                                                                   "value":  "1.0.0"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.language",
+                                                                   "type":  "string",
+                                                                   "value":  "python"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.name",
+                                                                   "type":  "string",
+                                                                   "value":  "opentelemetry"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.version",
+                                                                   "type":  "string",
+                                                                   "value":  "1.45.2"
+                                                               }
+                                                           ]
+                                              }
+                                   },
+                     "warnings":  null
+                 }
+             ],
+    "total":  0,
+    "limit":  0,
+    "offset":  0,
+    "errors":  null
+}

@@ -1,0 +1,33 @@
+{
+    "status":  "success",
+    "data":  {
+                 "alerts":  [
+                                {
+                                    "labels":  {
+                                                   "alertname":  "AgentHighErrorRate",
+                                                   "severity":  "critical"
+                                               },
+                                    "annotations":  {
+                                                        "description":  "Error rate hiá»n táº¡i: 20.6% (SLO: \u003c 5%)",
+                                                        "summary":  "Error rate /ask vÆ°á»£t 5%"
+                                                    },
+                                    "state":  "firing",
+                                    "activeAt":  "2026-11-25T14:11:57.401817116Z",
+                                    "value":  "2.060407736922816e-01"
+                                },
+                                {
+                                    "labels":  {
+                                                   "alertname":  "AgentHighLatencyP95",
+                                                   "severity":  "warning"
+                                               },
+                                    "annotations":  {
+                                                        "description":  "p95 hiá»n táº¡i: 1.896s (SLO: \u003c 1s)",
+                                                        "summary":  "p95 latency /ask vÆ°á»£t 1 giÃ¢y"
+                                                    },
+                                    "state":  "firing",
+                                    "activeAt":  "2026-11-25T14:11:57.401817116Z",
+                                    "value":  "1.8956732624377772e+00"
+                                }
+                            ]
+             }
+}

@@ -1,0 +1,379 @@
+{
+    "data":  [
+                 {
+                     "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                     "spans":  [
+                                   {
+                                       "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                       "spanID":  "0f0a827e99944da2",
+                                       "operationName":  "agent.retrieve_context",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                                              "spanID":  "fe826c538c007319"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616078275573,
+                                       "duration":  22354,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "retrieval.documents",
+                                                        "type":  "int64",
+                                                        "value":  1
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                       "spanID":  "02d7a196f66aa57c",
+                                       "operationName":  "chat mock-llm-small",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                                              "spanID":  "fe826c538c007319"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616078297999,
+                                       "duration":  91505,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "error.type",
+                                                        "type":  "string",
+                                                        "value":  "upstream_unavailable"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.operation.name",
+                                                        "type":  "string",
+                                                        "value":  "chat"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.provider.name",
+                                                        "type":  "string",
+                                                        "value":  "mock"
+                                                    },
+                                                    {
+                                                        "key":  "gen_ai.request.model",
+                                                        "type":  "string",
+                                                        "value":  "mock-llm-small"
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    },
+                                                    {
+                                                        "key":  "otel.status_code",
+                                                        "type":  "string",
+                                                        "value":  "ERROR"
+                                                    },
+                                                    {
+                                                        "key":  "error",
+                                                        "type":  "bool",
+                                                        "value":  true
+                                                    },
+                                                    {
+                                                        "key":  "otel.status_description",
+                                                        "type":  "string",
+                                                        "value":  "LLMError: Upstream LLM error: 503 Service Unavailable (mock)"
+                                                    }
+                                                ],
+                                       "logs":  [
+                                                    {
+                                                        "timestamp":  1795616078389472,
+                                                        "fields":  [
+                                                                       {
+                                                                           "key":  "event",
+                                                                           "type":  "string",
+                                                                           "value":  "exception"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.escaped",
+                                                                           "type":  "string",
+                                                                           "value":  "False"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.message",
+                                                                           "type":  "string",
+                                                                           "value":  "Upstream LLM error: 503 Service Unavailable (mock)"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.stacktrace",
+                                                                           "type":  "string",
+                                                                           "value":  "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 199, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.type",
+                                                                           "type":  "string",
+                                                                           "value":  "utils.mock_llm.LLMError"
+                                                                       }
+                                                                   ]
+                                                    }
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                       "spanID":  "fe826c538c007319",
+                                       "operationName":  "agent.run",
+                                       "references":  [
+                                                          {
+                                                              "refType":  "CHILD_OF",
+                                                              "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                                              "spanID":  "5b53f081ae754db9"
+                                                          }
+                                                      ],
+                                       "startTime":  1795616078275549,
+                                       "duration":  114129,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "agent"
+                                                    },
+                                                    {
+                                                        "key":  "agent.question.length",
+                                                        "type":  "int64",
+                                                        "value":  38
+                                                    },
+                                                    {
+                                                        "key":  "agent.version",
+                                                        "type":  "string",
+                                                        "value":  "v2"
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "internal"
+                                                    },
+                                                    {
+                                                        "key":  "otel.status_code",
+                                                        "type":  "string",
+                                                        "value":  "ERROR"
+                                                    },
+                                                    {
+                                                        "key":  "error",
+                                                        "type":  "bool",
+                                                        "value":  true
+                                                    },
+                                                    {
+                                                        "key":  "otel.status_description",
+                                                        "type":  "string",
+                                                        "value":  "LLMError: Upstream LLM error: 503 Service Unavailable (mock)"
+                                                    }
+                                                ],
+                                       "logs":  [
+                                                    {
+                                                        "timestamp":  1795616078389674,
+                                                        "fields":  [
+                                                                       {
+                                                                           "key":  "event",
+                                                                           "type":  "string",
+                                                                           "value":  "exception"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.escaped",
+                                                                           "type":  "string",
+                                                                           "value":  "False"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.message",
+                                                                           "type":  "string",
+                                                                           "value":  "Upstream LLM error: 503 Service Unavailable (mock)"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.stacktrace",
+                                                                           "type":  "string",
+                                                                           "value":  "Traceback (most recent call last):\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 602, in use_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1136, in start_as_current_span\n    yield span\n  File \"/home/agent/.local/lib/python3.11/site-packages/opentelemetry/trace/__init__.py\", line 441, in start_as_current_span\n    yield span\n  File \"/app/app/main.py\", line 153, in run_agent\n    result = await mock_llm.generate(question, context=context,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/utils/mock_llm.py\", line 199, in generate\n    raise LLMError(\"Upstream LLM error: 503 Service Unavailable (mock)\")\nutils.mock_llm.LLMError: Upstream LLM error: 503 Service Unavailable (mock)\n"
+                                                                       },
+                                                                       {
+                                                                           "key":  "exception.type",
+                                                                           "type":  "string",
+                                                                           "value":  "utils.mock_llm.LLMError"
+                                                                       }
+                                                                   ]
+                                                    }
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   },
+                                   {
+                                       "traceID":  "5f1962fda46352913c9999af4b533d3c",
+                                       "spanID":  "5b53f081ae754db9",
+                                       "operationName":  "POST /ask",
+                                       "references":  [
+
+                                                      ],
+                                       "startTime":  1795616078274842,
+                                       "duration":  115409,
+                                       "tags":  [
+                                                    {
+                                                        "key":  "otel.scope.name",
+                                                        "type":  "string",
+                                                        "value":  "opentelemetry.instrumentation.fastapi"
+                                                    },
+                                                    {
+                                                        "key":  "otel.scope.version",
+                                                        "type":  "string",
+                                                        "value":  "0.66b2"
+                                                    },
+                                                    {
+                                                        "key":  "http.flavor",
+                                                        "type":  "string",
+                                                        "value":  "1.1"
+                                                    },
+                                                    {
+                                                        "key":  "http.host",
+                                                        "type":  "string",
+                                                        "value":  "172.23.0.8:8000"
+                                                    },
+                                                    {
+                                                        "key":  "http.method",
+                                                        "type":  "string",
+                                                        "value":  "POST"
+                                                    },
+                                                    {
+                                                        "key":  "http.route",
+                                                        "type":  "string",
+                                                        "value":  "/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.scheme",
+                                                        "type":  "string",
+                                                        "value":  "http"
+                                                    },
+                                                    {
+                                                        "key":  "http.server_name",
+                                                        "type":  "string",
+                                                        "value":  "localhost"
+                                                    },
+                                                    {
+                                                        "key":  "http.status_code",
+                                                        "type":  "int64",
+                                                        "value":  503
+                                                    },
+                                                    {
+                                                        "key":  "http.target",
+                                                        "type":  "string",
+                                                        "value":  "/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.url",
+                                                        "type":  "string",
+                                                        "value":  "http://localhost/ask"
+                                                    },
+                                                    {
+                                                        "key":  "http.user_agent",
+                                                        "type":  "string",
+                                                        "value":  "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9818"
+                                                    },
+                                                    {
+                                                        "key":  "net.host.port",
+                                                        "type":  "int64",
+                                                        "value":  8000
+                                                    },
+                                                    {
+                                                        "key":  "net.peer.ip",
+                                                        "type":  "string",
+                                                        "value":  "172.23.0.6"
+                                                    },
+                                                    {
+                                                        "key":  "net.peer.port",
+                                                        "type":  "int64",
+                                                        "value":  54510
+                                                    },
+                                                    {
+                                                        "key":  "span.kind",
+                                                        "type":  "string",
+                                                        "value":  "server"
+                                                    },
+                                                    {
+                                                        "key":  "otel.status_code",
+                                                        "type":  "string",
+                                                        "value":  "ERROR"
+                                                    },
+                                                    {
+                                                        "key":  "error",
+                                                        "type":  "bool",
+                                                        "value":  true
+                                                    }
+                                                ],
+                                       "logs":  [
+
+                                                ],
+                                       "processID":  "p1",
+                                       "warnings":  null
+                                   }
+                               ],
+                     "processes":  {
+                                       "p1":  {
+                                                  "serviceName":  "observable-agent",
+                                                  "tags":  [
+                                                               {
+                                                                   "key":  "agent.version",
+                                                                   "type":  "string",
+                                                                   "value":  "v2"
+                                                               },
+                                                               {
+                                                                   "key":  "deployment.environment.name",
+                                                                   "type":  "string",
+                                                                   "value":  "lab"
+                                                               },
+                                                               {
+                                                                   "key":  "service.instance.id",
+                                                                   "type":  "string",
+                                                                   "value":  "d67abb3b7132"
+                                                               },
+                                                               {
+                                                                   "key":  "service.version",
+                                                                   "type":  "string",
+                                                                   "value":  "1.0.0"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.language",
+                                                                   "type":  "string",
+                                                                   "value":  "python"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.name",
+                                                                   "type":  "string",
+                                                                   "value":  "opentelemetry"
+                                                               },
+                                                               {
+                                                                   "key":  "telemetry.sdk.version",
+                                                                   "type":  "string",
+                                                                   "value":  "1.45.2"
+                                                               }
+                                                           ]
+                                              }
+                                   },
+                     "warnings":  null
+                 }
+             ],
+    "total":  0,
+    "limit":  0,
+    "offset":  0,
+    "errors":  null
+}
